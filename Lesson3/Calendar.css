@@ -1,0 +1,17 @@
+body {
+    margin: 0
+    display: flex;
+    min-height: 100vh;
+    align-items: stretch;
+    
+
+}
+
+.day-overview {
+    flex: 1535 0 0;
+}
+
+.month-overview {
+    flex: 802 0 0;
+    background: rgba(42, 46, 65, 0.7);
+}
