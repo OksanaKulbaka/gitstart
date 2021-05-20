@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Calendar.css" rel="stylesheet" type="text/css">
+    <link href="Calendar.css" rel="stylesheet" type="css">
     <title>Calendar</title>
 </head>
 <body>
     <main class="day-overview"></main>
-    <aside class="month-overview">
+    <aside class="month-view">
 
         <div class="calendar">
             <div class="calendar__header">
+                <div class="calendar__title">
+                    March 2018
+                </div>
+                <button
+                    area-label="Previous month" 
+                    class="calendar__btn calendar__btn--prev">
+                    <svg 
+                        role="image";
+                        area-label="";
+                        class="calendar__btn-image" 
+                        viewBox="0 0 20 38">
+                            <path d="M19 1L1 19L19 37" />
+                    </svg>
+                <button
+                    area-label="Next month" 
+                    class="calendar__btn calendar__btn--next">
+                    <svg 
+                        role="image"
+                        area-label=""
+                        class="calendar__btn-image calendar__btn-image--rotated" 
+                        viewBox="0 0 20 38">
+                            <path d="M19 1L1 19L19 37" />
+                    </svg>
             </div>
+
             <ol class="calendar__day-names">
                 <li class="calendar__day-name calendar__day-name--current">M</li>
                 <li class="calendar__day-name calendar__day-name--current">T</li>
@@ -22,12 +46,11 @@
                 <li class="calendar__day-name calendar__day-name--current">F</li>
                 <li class="calendar__day-name calendar__day-name--current">Sat</li>
                 <li class="calendar__day-name calendar__day-name--current">Sun</li>
-
             </ol>
             
             <ol class="calendar__days">
                 <li class="calendar__day">
-                    <a href="#">1</a>
+                <a href="#">1</a>
                 </li>
                 <li class="calendar__day">
                     <a href="#">2</a>
@@ -128,7 +151,6 @@
                 <li class="calendar__day">
                     <a href="#">3</a>
                 </li>
-
 
             </ol>
         </div>
