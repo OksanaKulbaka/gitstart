@@ -1,20 +1,24 @@
+ *,
+ *::before
+ *::after {
+     box-sizing: border-box;
+ }
  body {
-    margin: 0
-    display flex;
+    margin: 0;
+    display: flex;
     min-height: 100vh;
-    align-self: stretch;
-
+    align-items: stretch;
+    font-family: 'Roboto', sans-serif;
 }
 
 .day-view {
     flex: 1535 0 0;
     background: #FFF;
-
 }
 
 .month-view {
     flex: 799 0 0;
-    padding: 0 4.37% 4.11%;
+    padding: 0 4.37% 0 4.11%;
     box-sizing: border-box;
     background: rgba(42, 46, 65, 0.7);
 }
@@ -24,7 +28,6 @@
     box-sizing: border-box;
     display: flex;
     position: relative;
-
 }
 
 .calendar__header::before, 
@@ -38,13 +41,11 @@
 
     width: 100%;
     height: 2px;
-
 }
 
 .calendar__header::before {
     background: #000000;
-    /* opacity: 0.17; */
-
+    opacity: 0.17;
 }
 
 .calendar__header::after {
@@ -60,28 +61,24 @@
     font-size: 36px;
     line-height: 42px;
     color: #FFF;
-
-
 }
 
 .calendar__btn {
-    flex: 0 0 18px;
+    flex: 0 0 20px;
     background: transparent;
-    border: 0;
     padding: 0;
+    border: 0;
     cursor: pointer;
-
+    color: #FFF;
 }
 
 .calendar__btn:hover {
     color: #88b1f6;
-
 }
 
 .calendar__btn:focus {
     color: #88b1f6;
     outline: none;
-
 }
 
 .calendar__btn-image {
@@ -91,22 +88,18 @@
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
-
 }
 
 .calendar__btn--next {
     order: 3;
-
 }
 
 .calendar__btn-image--rotated {
     transform: rotate(180deg);
-
 }
 
 .calendar__btn--prev {
     order: 1;
-
 }
 
 .calendar__day-names {
@@ -115,8 +108,6 @@
     list-style: none;
 
     display: flex;
-
-
 }
 
 .calendar__days {
@@ -125,41 +116,164 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+}
 
+.calendar__day {
+    flex-basis: 13%;
+    flex-shrink: 0;
+    flex-grow: 1;
+    padding: .08621em;
+
+    padding: 1.07vw 0;
+
+    font-size: 29px;
+    line-height: 1.1725;
+
+    display: flex;
+    justify-content: center;
 }
 
 .calendar__day-name {
     flex: 1 0 0;
     text-align: center;
-    font-size: 26px;
-    line-height: 30px;
+
+    font-size: 29px;
+    line-height: 1.1539;
     color: #FFF;
+   
     mix-blend-mode: normal;
     opacity: 0.6;
-    
 }
 
-.calendar__day-name--current {
+.calendar__day a {
+    display: block;
     position: relative;
+    z-index: 1;
 
+    font-weight: bold;
+    font-size: inherit;
+  
+    text-align: center;
+    text-decoration: none;
+
+    width: 3.4276vw;
+    height: 3.4276vw;
+    line-height: 3.4276vw;
+
+    color: #FFF;
 }
-.calendar__day-name--current::after {
+.calendar__day a:hover::after,
+.calendar__day--current a::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    aspect-ratio: 1;
+    width: 100%;
+    /* aspect-ratio: 1; */
     height: 100%;
+    background: #3C82F9;
+    border-radius: 50%;
 
+    z-index: -1;
 }
 
-.calendar__btn calendar__btn-prev {
+.calendar__btn .calendar__btn-prev {
     height: 18px;
     width: 36px;
-    
+    color: #FFF;
 }
-.calendar__btn calendar__btn-next {
+.calendar__btn .calendar__btn-next {
     height: 18px;
-    width: 36px;
-    
+    width: 36px; 
+    color: #FFF;
+}
+.categories {
+    min-height: 711px;
+    color: #FFF;
+    box-sizing: border-box;
+    /* margin-top: 50px;
+    margin-bottom: 35px; */
+}
+.categories__title-content {
+    font-size: 29px;
+    line-height: 33,98px;
+    font-weight: 500;
+}
+.categories::before,
+.categories::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+
+    mix-blend-mode: normal;
+
+    width: 100%;
+    /* max-width: 732.16px;  */
+    height: 2px;
+}
+
+.categories::before {
+    background: #000000;
+    opacity: 0.17;
+}
+
+.categories::after {
+    bottom: -2px;
+    background: #FFF;
+    opacity: 0.13;
+}
+
+.categories__buttons {
+    display: flex;
+    position: absolute;
+    flex: 1 0 0;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* flex-basis: 67%;
+    flex-shrink: 0;
+    flex-grow: 1; */
+}
+
+a {
+    text-decoration: none;
+    flex: 1 0 0;
+    max-width: 33.3%;
+    height: 80px;
+    border-radius: 12px;
+    color: inherit;
+}
+
+.btn__footer-finance {
+    width: 285px;
+    /* flex: 0 0 285px; */
+    /* height: 80px; */
+    left: 100px;
+    line-height: 25.78px;
+    background: #8576ED;
+    order: 1;
+    /* align-items: center; */
+
+}
+.btn__footer-management {
+    width: 285px;
+    /* flex: 0 0 285px; */
+    /* height: 80px; */
+
+    background: #F39946;
+    order: 2;
+    line-height: 25.78px;
+}
+
+.btn__footer-design {
+    width: 275px;
+    /* flex: 0 0 285px; */
+    /* height: 80px; */
+
+    background: #FF467E;
+    order: 3;
+    line-height: 25.78px;
 }

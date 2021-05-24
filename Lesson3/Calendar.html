@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Calendar.css" rel="stylesheet" type="css">
+    <link href="./Calendar.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
     <title>Calendar</title>
 </head>
 <body>
-    <main class="day-overview"></main>
+    <main class="day-view"></main>
     <aside class="month-view">
 
         <div class="calendar">
@@ -40,19 +43,19 @@
 
             <ol class="calendar__day-names">
                 <li class="calendar__day-name calendar__day-name--current">M</li>
-                <li class="calendar__day-name calendar__day-name--current">T</li>
-                <li class="calendar__day-name calendar__day-name--current">W</li>
-                <li class="calendar__day-name calendar__day-name--current">T</li>
-                <li class="calendar__day-name calendar__day-name--current">F</li>
-                <li class="calendar__day-name calendar__day-name--current">Sat</li>
-                <li class="calendar__day-name calendar__day-name--current">Sun</li>
+                <li class="calendar__day-name">T</li>
+                <li class="calendar__day-name">W</li>
+                <li class="calendar__day-name">T</li>
+                <li class="calendar__day-name">F</li>
+                <li class="calendar__day-name">Sat</li>
+                <li class="calendar__day-name">Sun</li>
             </ol>
             
             <ol class="calendar__days">
                 <li class="calendar__day">
                 <a href="#">1</a>
                 </li>
-                <li class="calendar__day">
+                <li class="calendar__day current__day--current">
                     <a href="#">2</a>
                 </li>
                 <li class="calendar__day">
@@ -153,6 +156,18 @@
                 </li>
 
             </ol>
+
+            <div class="categories">
+                <div class="categoris__title">
+                    <p class="categoris__title-content">
+                        Your categories
+                    </p>
+                    <a class="categories__buttons" href="#">FINANCE</a>
+                    <a class="categories__buttons" href="#">MANAGEMENT</a>
+                    <a class="categories__buttons" href="#">DESIGN</a>
+                </div>
+            </div>
+                
         </div>
     </aside>
     
