@@ -21,7 +21,7 @@
 }
 
 .first_block .colored {
-    flex: 0 0 50%;
+    flex-basis: 25%;
 }
 
 .second_block {
@@ -48,28 +48,23 @@
     flex: 0 0 100%;
 }
 
-.fourth_block .colored:last-child {
-    flex-grow: 1 0 0;
-}
-
 .fifth_block {
-    display: flex;
+    display: 0 0 100%;
 }
 
 .fifth_block .colored {
-    flex: 1 0 0;
+    flex: 100%;
 }
 
-@media (max-width 768px) {
+@media (min-width: 768px) {
     .first_block {
         flex-wrap: wrap;
     }
 
     .first_block .colored {
         flex-grow: 0;
-        flex-basis: 50;
+        flex-basis: 50%;
+        margin: 0;
     }
-    .fourth_block, .fifth_block {
-        display: block;
-    }
+
 }
