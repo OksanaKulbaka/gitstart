@@ -1,8 +1,3 @@
- *,
- *::before
- *::after {
-     box-sizing: border-box;
- }
  body {
     margin: 0;
     display: flex;
@@ -83,6 +78,7 @@
 
 .calendar__btn-image {
     width: 100%;
+
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
@@ -137,7 +133,7 @@
     flex: 1 0 0;
     text-align: center;
 
-    font-size: 29px;
+    font-size: 26px;
     line-height: 1.1539;
     color: #FFF;
    
@@ -146,14 +142,16 @@
 }
 
 .calendar__day a {
-    display: block;
     position: relative;
     z-index: 1;
+
+    display: block;
 
     font-weight: bold;
     font-size: inherit;
   
     text-align: center;
+
     text-decoration: none;
 
     width: 3.4276vw;
@@ -162,6 +160,7 @@
 
     color: #FFF;
 }
+
 .calendar__day a:hover::after,
 .calendar__day--current a::after {
     content: '';
@@ -169,7 +168,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    /* aspect-ratio: 1; */
     height: 100%;
     background: #3C82F9;
     border-radius: 50%;
@@ -188,9 +186,15 @@
     color: #FFF;
 }
 .categories {
+    margin-top: 124px;
+    box-sizing: border-box;
     min-height: 711px;
     color: #FFF;
     box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-basis: 50%;
+   
     /* margin-top: 50px;
     margin-bottom: 35px; */
 }
@@ -203,77 +207,108 @@
 .categories::after {
     position: absolute;
     left: 0;
-    bottom: 0;
     content: '';
+    top: 0;
 
     mix-blend-mode: normal;
 
     width: 100%;
-    /* max-width: 732.16px;  */
     height: 2px;
 }
 
 .categories::before {
     background: #000000;
     opacity: 0.17;
+    top: -2px;
 }
 
 .categories::after {
-    bottom: -2px;
     background: #FFF;
     opacity: 0.13;
+    /* top: -3; */
 }
 
-.categories__buttons {
-    display: flex;
-    position: absolute;
-    flex: 1 0 0;
-    flex-wrap: wrap;
-    text-align: center;
+/* .categories__buttons {
     margin: 0;
     padding: 0;
     border: 0;
-    /* flex-basis: 67%;
-    flex-shrink: 0;
-    flex-grow: 1; */
-}
+} */
 
-a {
-    text-decoration: none;
-    flex: 1 0 0;
-    max-width: 33.3%;
+.buttons__items {
+    margin-top: 42px;
     height: 80px;
     border-radius: 12px;
-    color: inherit;
 }
 
-.btn__footer-finance {
+.categories__buttons-finance {
     width: 285px;
-    /* flex: 0 0 285px; */
-    /* height: 80px; */
-    left: 100px;
-    line-height: 25.78px;
+    justify-content: center;
+  
+
     background: #8576ED;
     order: 1;
-    /* align-items: center; */
+    line-height: 25.78px;
+    text-decoration: none;
+    padding: 28px;
+    color: #FFF;
+    border-radius: 12px;
+    display: flex;
 
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    max-width: 45%;
+    margin-bottom: 30px;
+    margin-right: 28px;
 }
-.btn__footer-management {
-    width: 285px;
-    /* flex: 0 0 285px; */
-    /* height: 80px; */
+
+.categories__buttons-management {
+    /* width: 285px; */
 
     background: #F39946;
+    justify-content: center;
+
+    width: 285px;
     order: 2;
     line-height: 25.78px;
+    text-decoration: none;
+    padding: 28px;
+    color: #FFF;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    max-width: 45%;
+    margin-bottom: 30px;
+    margin-right: 28px;
+
 }
 
-.btn__footer-design {
-    width: 275px;
-    /* flex: 0 0 285px; */
-    /* height: 80px; */
+.categories__buttons-design {
+    /* width: 285px; */
 
     background: #FF467E;
+    justify-content: center;
+    width: 285px;
     order: 3;
     line-height: 25.78px;
+    text-decoration: none;
+    padding: 28px;
+    color: #FFF;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    max-width: 45%;
+    margin-bottom: 30px;
+    margin-right: 28px;
+
+
+    /* order: 1;
+    line-height: 25.78px;
+    text-decoration: none;
+    padding: 28px;
+    color: #FFF;
+    border-radius: 20px;
+    flex-basis: 35%; */
+ 
 }
