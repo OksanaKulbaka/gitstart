@@ -202,6 +202,7 @@
     font-size: 29px;
     line-height: 33,98px;
     font-weight: 500;
+    
 }
 .categories::before,
 .categories::after {
@@ -238,6 +239,9 @@
     margin-top: 42px;
     height: 80px;
     border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .categories__buttons-finance {
@@ -256,7 +260,7 @@
 
     flex-wrap: wrap;
     flex-basis: 100%;
-    max-width: 45%;
+    max-width: 30%;
     margin-bottom: 30px;
     margin-right: 28px;
 }
@@ -277,9 +281,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-basis: 100%;
-    max-width: 45%;
+    max-width: 30%;
     margin-bottom: 30px;
-    margin-right: 28px;
 
 }
 
@@ -298,17 +301,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-basis: 100%;
-    max-width: 45%;
+    max-width: 30%;
     margin-bottom: 30px;
     margin-right: 28px;
-
-
-    /* order: 1;
-    line-height: 25.78px;
-    text-decoration: none;
-    padding: 28px;
-    color: #FFF;
-    border-radius: 20px;
-    flex-basis: 35%; */
- 
 }
