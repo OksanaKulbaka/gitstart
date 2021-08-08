@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/normalize.css">
+  <link href="css/elements.css" rel="stylesheet">
+  <script type="text/javascript" src="my_js.js"></script>
   <title>ThriveTalk</title>
 </head>
 <body>
@@ -17,18 +19,18 @@
             <a>Home</a>
           </li>
           <li class="nav-item">
-            <a href="#">About</a>
+            <a href="#aboutus">About</a>
           </li>
           <li class="nav-item">
-            <a href="#">Services</a>
+            <a href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a href="#">Blog</a>
+            <a href="#blog">Blog</a>
           </li>
         </ul>
       </nav>
 
-      <a class="contact-btn" href="#">Contact us</a>
+      <a class="contact-btn" href="#contactus">Contact us</a>
     </div>
 
     <div class="promo">
@@ -67,7 +69,7 @@
 
     <section class="about">
       <div class="wrapper">
-        <h2 class="title">About us</h2>
+        <h2 id="aboutus">About us</h2>
   
         <p class="text">
           We want to help you thrive! Whether you are just looking for someone to 
@@ -79,7 +81,7 @@
       </div>
 
       <div class="services">
-        <h3 class="title">We can help you with</h3>
+        <h3 class="title" id="services">We can help you with</h3>
   
         <div class="list">
           <div class="wrapper1">
@@ -145,7 +147,7 @@
   
         <div class="wrapper">
           <div class="item">
-            <h4 class="title">Nutritional plans</h4>
+            <h4 class="title" id="blog">Nutritional plans</h4>
             <p class="text">
               Nutritional Facts on some shitty things that you don’t care about
               and even we don’t , I need to replace this copy.
@@ -202,13 +204,18 @@
           the U.S. population age 18 and older in a given year. We at 
           <span class="strong">ThriveTalk</span> can help you.
         </p>
-        <a href="#" class="btn btn-unfilled">Get help now</a>
+        <button type="button" onclick="clickHandler()">Get help now</button>
+        <script>
+          function clickHandler() {
+            alert (<div id="dialog" title = "basic dialog">)
+          }
+        </script>
       </div>
     </section>
 
     <section class="feedback">
       <div class="wrapper">
-        <h2 class="title">Contact us</h2>
+        <h2 class="title" id="contactus">Contact us</h2>
   
         <p class="text text-big">
           Ready. Set. Smile

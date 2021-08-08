@@ -387,6 +387,9 @@ div {
   text-align: center;
 }
 
+
+
+
 .services .list {
   font: inherit;
   font-weight: bold;
@@ -409,10 +412,24 @@ div {
   flex-grow: 1;
   position: relative;
 }
-.services .wrapper1 .item:nth-child(1) { background-color: #FFE2DE; }
+.services .wrapper1 .item:nth-child(1) { background-color: #FFE2DE; 
+}
+.services .wrapper1 .item:nth-child(1):hover{
+  background-color: #8F00FF;
+}
 .services .wrapper1 .item:nth-child(2) { background-color: #C4E769; }
+.services .wrapper1 .item:nth-child(2):hover{
+  background-color: #8F00FF;
+}
 .services .wrapper1 .item:nth-child(3) { background-color: #62D0DF; }
+.services .wrapper1 .item:nth-child(3):hover{
+  background-color: #8F00FF;
+}
+
 .services .wrapper1 .item:nth-child(4) { background-color: #0052C1; }
+.services .wrapper1 .item:nth-child(4):hover{
+  background-color: #8F00FF;
+}
 
 .services .item .text {
   position: relative;
@@ -472,7 +489,8 @@ div {
   flex-grow: 1;
   position: relative;
 }
-.services .wrapper2 .item:nth-child(2n) { background-color: #FFE2DE; }
+.services .wrapper2 .item:nth-child(2n){
+background-color: #FFE2DE; }
 .services .wrapper2 .item:nth-child(1) { background-color: #22356F; }
 .services .wrapper2 .item:nth-child(2) { background-color: #0052C1; }
 .services .wrapper2 .item:nth-child(3) { 
@@ -775,3 +793,8 @@ div {
 }
 
 /* Footer block end */
+
+
+
+
+
